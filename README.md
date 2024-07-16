@@ -25,7 +25,9 @@ This repository contains the code, documentation, and hardware design files for 
 - [Software architecture and Working Scheme](#software-architecture-and-working-scheme)
 
 ## About this project
+The MSP432P401R microcontroller will be used in the Embedded IoT Multisensor System project to monitor and control a variety of environmental conditions. With its numerous sensors for measuring temperature (both internal and external), brightness, and noise levels, the system offers a complete solution for preserving ideal environmental conditions in a domestic setting. This project, which draws inspiration from the ideas of thermal comfort,which is the condition of mind that expresses satisfaction with the thermal environment and is influenced by various factors such as temperature, humidity, and air movement. Maintaining a comfortable indoor climate is essential for well-being, productivity, and energy efficiency.
 
+The system's central component, the MSP432P401R microcontroller, interfaces with a range of sensors and actuators to collect information and react to changes in the surrounding environment. The ESP8266 WiFi module uses wireless to comunicate with the APIs of Telegram and manages the TelegramBot, that help in monitoring and controlling your home. The data should pass through a serial port, from the MSP432 to the ESP8266.
 
 The [PowerPoint presentation](./presentationProject.pdf) for the oral exam is in the main folder.
 
@@ -42,7 +44,7 @@ See [Software architecture and Working Scheme](#software-architecture-and-workin
 ### Debugging
 
 
-### Web Server
+### TelegramBot server
 
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -58,8 +60,8 @@ See [Software architecture and Working Scheme](#software-architecture-and-workin
 ├── Code                    # PlatformIO project folder for the ATmega2560
 |   ├── include             # All the header files
 |   └── src                 # All the source code files
-├── Script                 # All the Python script
-└── WebServer              # Arduino IDE project folder
+├── Script                   # Python script
+└── TelegramBot              # Arduino IDE project folder
 ```
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
