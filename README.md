@@ -23,6 +23,7 @@ This repository contains the code, documentation, and hardware design files for 
   - [Software requirements](#software-requirements)
 - [Schematic](#schematic)
 - [Software architecture and Working Scheme](#software-architecture-and-working-scheme)
+- [How to build, burn and run](#How-to-build-burn-and-run)
 
 ## About this project
 The MSP432P401R microcontroller will be used in the Embedded IoT Multisensor System project to monitor and control a variety of environmental conditions. With its numerous sensors for measuring temperature (both internal and external), brightness, and noise levels, the system offers a complete solution for preserving ideal environmental conditions in a domestic setting. This project, which draws inspiration from the ideas of thermal comfort,which is the condition of mind that expresses satisfaction with the thermal environment and is influenced by various factors such as temperature, humidity, and air movement. Maintaining a comfortable indoor climate is essential for well-being, productivity, and energy efficiency.
@@ -38,7 +39,7 @@ The pitch video demonstration can be found at <a href="">here</a>.
 ### Libraries documentation
 The [documentation](./doc.md) can be found in the main folder
 
-See [Software architecture and Working Scheme](#software-architecture-and-working-scheme) for the most important information.
+See [Software architecture/Scheme](#software-architecture-and-working-scheme) for the most important information.
 
 
 ### Debugging
@@ -132,3 +133,8 @@ Once again, I need to distinguish the two MCUs as the software architecture is d
 
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
+
+## How to build burn and run
+### ESP8266: 
+
+### MSP432P4011R: 
