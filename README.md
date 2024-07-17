@@ -7,7 +7,7 @@ This repository contains the code, documentation, and hardware design files for 
 | Tommaso Santus | tommaso.santos@studenti.unitn.it | 226666
 
 <p align="center">
-<img src="./docImages/???" height="500px">
+<img src="Copertina.jpg" height="500px">
 </p>
 
 ## Table of contents
@@ -20,9 +20,7 @@ This repository contains the code, documentation, and hardware design files for 
 - [Requirements](#requirements)
   - [Hardware Requirements](#hardware-requirements)
   - [Software requirements](#software-requirements)
-- [Schematic](#schematic)
 - [Software architecture and Working Scheme](#software-architecture-and-working-scheme)
-- [How to build, burn and run](#How-to-build-burn-and-run)
 
 ## About this project
 The MSP432P401R microcontroller will be used in the Embedded IoT Multisensor System project to monitor and control a variety of environmental conditions. With its numerous sensors for measuring temperature (both internal and external), brightness, and noise levels, the system offers a complete solution for preserving ideal environmental conditions in a domestic setting. This project, which draws inspiration from the ideas of thermal comfort,which is the condition of mind that expresses satisfaction with the thermal environment and is influenced by various factors such as temperature, humidity, and air movement. Maintaining a comfortable indoor climate is essential for well-being, productivity, and energy efficiency.
@@ -53,15 +51,12 @@ The WiFi credentials are directly hard coded inside the tgUniversalBot.ino. Obvi
   * Secondly, we decided to move ourself to a more simple way of transmission. We tried to use the serial port of the MSP to let it comunicate with its ESP8266(Wifi Module). The link was working just for the ESP, but from and to the MSP nothing passed.
   * Currently the project doesn't permit the two boards to comunicate, but the code of the ESP8266 is suitable for communication(API and Serial)
 - Buttons flickering: We noted that, sometimes when we press a button(B1, B2) the Interrupt handler is called multiple times. So the button state is changed different times and the result is inconsistent
-- 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## Project Layout
 
 ```
-├── Code                    # PlatformIO project folder for the ATmega2560
-|   ├── include             # All the header files
-|   └── src                 # All the source code files
+├── PROGETTO                 # C script for MSP432
 ├── Script                   # Python script
 └── tgBotUniversal              # Arduino IDE project folder
     ├── tgBotUniversal.ino             # the telegram bot server code
@@ -151,6 +146,13 @@ We used the following libraries:
 Once again, I need to distinguish the two MCUs as the software architecture is different:
 
 ### MSP432P401R
+First, it stops the watchdog timer and initializes all the hardware components: buzzer and TMP36 need a PWM timer and the termometer needs a analog to digital conversion too. TMP006 and OPT3001 need a I2C comunication and fan, led and buttons just need to set the GPIO pins.
+
+Next, it initializes the variables and enters the infinite loop, once inside it sense all the data from the sensors (light, ambient temperature and wall temperature) than it checks who is in control: ny default it checks by itself if the "Comfort zone" is reached otherwise it activate the actuators.
+
+If the buttons are pressed instead, it follows the command given by the status of the buttons. Button one (j4.33) controls the cooling/heating system and button two (j4.32) controls the light.
+
+Before starting again the loop it prints the values on the LCD screen (even on console for debug), the color of the temperature changes based on the comfort: green if it too cold, red if it is too hot otherwise yellow.
 
 
 ### ESP8266
