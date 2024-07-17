@@ -27,7 +27,7 @@ The MSP432P401R microcontroller will be used in the Embedded IoT Multisensor Sys
 
 The system's central component, the MSP432P401R microcontroller, interfaces with a range of sensors and actuators to collect information and react to changes in the surrounding environment. The ESP8266 WiFi module uses wireless to comunicate with the APIs of Telegram and manages the TelegramBot, that help in monitoring and controlling your home. The data should pass through a serial port, from the MSP432 to the ESP8266.
 
-The [PowerPoint presentation](./presentationProject.pdf) for the oral exam is in the main folder.
+The [PowerPoint presentation](./presentationProject.pptx) for the oral exam is in the main folder.
 
 The pitch video demonstration can be found at <a href="">here</a>.
 <p align="right">(<a href="#top">Back to top</a>)</p>
