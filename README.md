@@ -29,7 +29,7 @@ The system's central component, the MSP432P401R microcontroller, interfaces with
 
 The [PowerPoint presentation](./presentationProject.pptx) for the oral exam is in the main folder.
 
-The pitch video demonstration can be found at <a href="">here</a>.
+The pitch video demonstration can be found at <a href="https://youtu.be/dHpmgpTN8gQ">here</a>.
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## Documentation
