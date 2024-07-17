@@ -5,15 +5,8 @@
 #include <ESP8266WebServer.h>
 #include <UniversalTelegramBot.h>
 
-// Wifi network station credentials
-//#define WIFI_SSID "*NOT A VIRUS*"
-//#define WIFI_PASSWORD "FT4UUX3UEFXX3R4L"
-
-#define WIFI_SSID "Home&Life SuperWiFi-01B2"
-#define WIFI_PASSWORD "FT4UUX3UEFXX3R4L"
-
-//#define WIFI_SSID "Home&Life SuperWiFi-66E5"
-//#define WIFI_PASSWORD "3NCG4GKQM4E77GYM"
+#define WIFI_SSID "SSID wifi"
+#define WIFI_PASSWORD "insert wifi password"
 
 // Telegram Bot token
 #define BOT_TOKEN "7257399139:AAFlpPbv9ReILzkCYz7xnjvIax6kgWqhSrA"
